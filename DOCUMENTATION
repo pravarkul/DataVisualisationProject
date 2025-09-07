@@ -1,0 +1,37 @@
+DOCUMENTATION
+1. Introduction
+This project focuses on detecting diabetic retinopathy using the Messidor-II dataset. Various pre-processing and classification techniques were applied, including:
+•	Random Forest Algorithm for classification
+•	Naïve Bayes Classifier as an alternative model
+•	CLAHE (Contrast Limited Adaptive Histogram Equalization) for image enhancement
+•	Green Channel Extraction for better feature representation
+•	Feature Extraction using statistical and texture-based techniques
+•	F1-score evaluation to measure model performance
+2. Dataset: Messidor-II
+The Messidor-II dataset consists of fundus images used to assess diabetic retinopathy. These images contain different levels of severity, ranging from no DR to severe DR.
+3. Methodology
+3.1 Preprocessing
+1.	Green Channel Extraction
+o	Extracting the green channel from the RGB image as it provides the best contrast for detecting abnormalities.
+2.	CLAHE (Contrast Limited Adaptive Histogram Equalization)
+o	Enhances the contrast of images to make the features more distinguishable.
+3.2 Feature Extraction
+We extracted meaningful features to help classify diabetic retinopathy:
+•	Statistical Features (Mean, Standard Deviation, Skewness, Kurtosis)
+•	Texture Features using Gray Level Co-occurrence Matrix (GLCM) (Contrast, Energy, Homogeneity, Correlation)
+3.3 Classification Models
+•	Random Forest Algorithm
+o	An ensemble learning method that builds multiple decision trees and outputs the most common class.
+•	Naïve Bayes Classifier
+o	A probabilistic classifier based on Bayes’ theorem.
+3.4 Model Evaluation
+To evaluate model performance, we used:
+•	Confusion Matrix
+•	Precision, Recall, and F1-score
+4. Results
+The F1-score is used as the primary evaluation metric. The results indicate:
+•	Random Forest performed better than Naïve Bayes with higher precision and recall.
+•	CLAHE and Green Channel Extraction improved feature clarity, leading to better classification performance.
+5. Conclusion
+This project demonstrated an effective approach to diabetic retinopathy detection using Random Forest and Naïve Bayes. The application of image preprocessing, feature extraction, and evaluation metrics improved the classification accuracy. Future improvements can include deep learning techniques for better feature learning and classification.
+
